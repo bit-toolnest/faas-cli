@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "=== Dummy Installer Script ==="
+echo "=== FAAS-CLI Installer Script ==="
 echo "This script should install all required components for the tool."
 
 # Example steps (replace with real commands):
@@ -15,4 +15,12 @@ echo "This script should install all required components for the tool."
 #    sudo systemctl enable tool.service
 #    sudo systemctl start tool.service
 
-echo "✅ Installation complete (dummy run)"
+# Install faas-cli only if not installed
+if ! command -v faas-cli >/dev/null 2>&1; then
+  echo "➡ Installing faas-cli..."
+  curl -sSL https://cli.openfaas.com | sudo sh
+else
+  echo "✅ faas-cli already installed"
+fi
+
+echo "✅ Installation complete"
