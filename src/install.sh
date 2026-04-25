@@ -2,7 +2,6 @@
 set -e
 
 echo "=== FAAS-CLI Installer Script ==="
-echo "This script should install all required components for the tool."
 
 # Example steps (replace with real commands):
 # 1. Install system packages
