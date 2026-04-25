@@ -1,4 +1,4 @@
-ext.org = "bit-faas"
+ext.org = "bit-toolnest"
 
 // No dependencies for this tool
 ext.deps = []
